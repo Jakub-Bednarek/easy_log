@@ -1,7 +1,10 @@
 #include <iostream>
+#include "EasyLog.hpp"
 
 int main()
 {
-    std::cout << "O kurwa\n";
+    Elog::Logger log;
+    Elog::Logger other(std::move(log));
+    log = std::move(other);
     return 0;
 }
