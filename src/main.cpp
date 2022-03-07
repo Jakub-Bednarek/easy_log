@@ -4,7 +4,7 @@
 int main()
 {
     Elog::Logger log;
-    Elog::Logger other(std::move(log));
-    log = std::move(other);
+
+    log << "XD!" << std::endl;
     return 0;
 }
